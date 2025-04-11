@@ -1,0 +1,21 @@
+version: '3'
+# For Info : faisal.rwp@gmail.com
+# For Video : YouTube.com/khawajagan
+# For Blog : khawajagan.com
+# For Github : github.com/khawajagan
+
+services:
+  frontend:
+    build: frontend
+    ports:
+      - 8501:8501
+    depends_on:
+      - backend
+    volumes:
+        - ./storage:/storage
+  backend:
+    build: backend
+    ports:
+      - 8080:8080
+    volumes:
+      - ./storage:/storage
