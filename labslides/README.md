@@ -1,8 +1,5 @@
 # SecureSWDevelopment
-SecureSWDevelopment
-
-GitHub Repository
-
+SecureSWDevelopment - Lab Slides
 
 For course videos, please visit
 https://youtube.com/khawajagan

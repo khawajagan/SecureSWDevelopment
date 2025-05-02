@@ -1,7 +1,7 @@
 # SecureSWDevelopment
 SecureSWDevelopment
 
-GitHub Repository
+GitHub Code Repository
 
 
 For course videos, please visit

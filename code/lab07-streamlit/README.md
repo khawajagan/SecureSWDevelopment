@@ -1,8 +1,8 @@
 # SecureSWDevelopment
 SecureSWDevelopment
 
-GitHub Repository
-
+GitHub Code Repository
+Lab 07 - Streamlit
 
 For course videos, please visit
 https://youtube.com/khawajagan
