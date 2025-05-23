@@ -19,7 +19,7 @@ scrape_configs:
     metrics_path: /metrics
     scheme: http
     static_configs:
-      - targets: ['localhost:9090']
+      - targets: ['127.0.0.1:9090']
   - job_name: myDokcerNode # Change to whatever you like
     static_configs:
-      - targets: ['localhost:9100'] #Change this to your server's IP
+      - targets: ['127.0.0.1:9100'] #Change this to your server's IP
