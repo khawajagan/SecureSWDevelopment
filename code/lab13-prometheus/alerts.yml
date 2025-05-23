@@ -1,0 +1,28 @@
+groups:
+  - name: myAlertsRules
+    rules:
+      - alert: HighCPULoad
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[1m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: 'High CPU load (instance {{ $labels.instance }})'
+          description: "CPU load is > 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+      - alert: HighMemoryUsage
+        expr: (node_memory_MemTotal_bytes - node_memory_MemAvailable_bytes) / node_memory_MemTotal_bytes * 100 > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: 'High Memory usage (instance {{ $labels.instance }})'
+          description: "Memory usage is > 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+      - alert: DiskSpaceLow
+        expr: (node_filesystem_size_bytes - node_filesystem_free_bytes) / node_filesystem_size_bytes * 100 > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: 'Disk space low (instance {{ $labels.instance }})'
+          description: "Disk space is > 80%\n  VALUE = {{ $value }}\n  LABELS = {{ $labels }}"
+    
